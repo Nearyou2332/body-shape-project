@@ -1,10 +1,22 @@
 :root {
   /* fonts */
 
-  --family-main: "Roboto", sans-serif;
-  --family-secondary: "Bebas Neue", sans-serif;
+  --font-family: "Bebas Neue", sans-serif;
+  --second-family: "Roboto", sans-serif;
 
   --font-main: 16px;
 
-  /*  */
+  /* spacing */
+
+  --space-main: 30px;
+  --space-large: 50px;
+  --space-section: 150px;
+
+  /* colors */
+
+  --color-bg: #1f2a32;
+  --color-main: #ffd479;
+  --color-accent: #fafaf5;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }

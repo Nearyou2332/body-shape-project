@@ -1,0 +1,11 @@
+.menu {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.19em;
+}
+
+.menu__list {
+  display: flex;
+  gap: var(--space-large);
+}

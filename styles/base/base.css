@@ -1,3 +1,5 @@
 body {
-  font-family: var();
+  font-family: var(--second-family);
+  font-size: var(--font-main);
+  font-weight: 300;
 }

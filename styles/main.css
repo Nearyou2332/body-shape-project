@@ -21,3 +21,5 @@
 /* components */
 
 @import url(components/btn.css);
+@import url(components/menu.css);
+@import url(components/header.css);
