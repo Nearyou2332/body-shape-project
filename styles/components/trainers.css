@@ -1,0 +1,75 @@
+.trainers__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-large);
+}
+
+.trainers__top {
+  max-width: 800px;
+}
+
+.trainers__title {
+  font-family: var(--font-family);
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1;
+}
+
+.trainers__descr {
+  text-align: center;
+  line-height: 2;
+  color: var(--color-accent);
+}
+
+.trainers__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-main);
+}
+
+.trainers__card {
+  position: relative;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.trainers__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.trainers__image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.trainers__heading {
+  position: absolute;
+  z-index: 10;
+  top: 60%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1;
+  transition: all 0.2s ease-in;
+}
+
+.trainers__card:hover .trainers__heading {
+  opacity: 1;
+  top: 50%;
+}
+
+.trainers__card:hover.trainers__card::after {
+  opacity: 1;
+}

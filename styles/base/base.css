@@ -2,4 +2,7 @@ body {
   font-family: var(--second-family);
   font-size: var(--font-main);
   font-weight: 300;
+
+  background-color: var(--color-bg);
+  color: var(--color-main);
 }
