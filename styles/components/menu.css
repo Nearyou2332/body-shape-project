@@ -9,3 +9,12 @@
   display: flex;
   gap: var(--space-large);
 }
+
+.menu__link {
+  transition: color 0.2s;
+}
+
+.menu__link:hover,
+.menu__link:active {
+  color: var(--color-main);
+}
