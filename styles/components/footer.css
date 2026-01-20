@@ -1,0 +1,31 @@
+.footer {
+  padding-block: 70px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-main);
+}
+
+.footer__contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--space-large);
+  max-width: 584px;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-accent);
+}
+
+.footer__text {
+  grid-row: span 2;
+}
+
+.footer__link {
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--color-hover-btn);
+}

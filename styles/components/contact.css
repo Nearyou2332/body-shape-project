@@ -1,0 +1,30 @@
+.contact {
+  padding-top: 152px;
+  padding-bottom: 168px;
+
+  background-image: image-set(
+    url(../../image/contacts/contact-form-bg.jpg),
+    url(../../image/contacts/contact-form-bg@2x.jpg) 2x
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 585px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.contact__title {
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 70px;
+  letter-spacing: 0.06em;
+}
