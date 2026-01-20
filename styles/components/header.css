@@ -6,7 +6,7 @@
 
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left center;
+  background-position: left 30%;
 }
 
 .header__top {
@@ -21,4 +21,10 @@
   justify-content: flex-end;
   padding-top: 125px;
   padding-bottom: 182px;
+}
+
+@media screen and (min-width: 1920px) {
+  .header {
+    background-image: url("../../image/hero/hero-bg@2x.jpg");
+  }
 }
