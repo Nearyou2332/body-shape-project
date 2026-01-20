@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  padding: 18px 46px;
+  border-radius: 7px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  font-size: 19px;
+  background-color: var(--color-main);
+  transition: background-color 0.2s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--color-hover-btn);
+}

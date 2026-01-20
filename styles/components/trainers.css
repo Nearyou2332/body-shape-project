@@ -10,6 +10,7 @@
 }
 
 .trainers__title {
+  text-transform: uppercase;
   font-family: var(--font-family);
   font-size: 96px;
   font-weight: 700;
@@ -56,6 +57,7 @@
   left: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
+  text-transform: uppercase;
   font-family: var(--font-family);
   font-size: 42px;
   font-weight: 700;
