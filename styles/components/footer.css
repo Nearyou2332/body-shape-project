@@ -1,5 +1,5 @@
 .footer {
-  padding-block: 70px;
+  padding-block: clamp(2.5rem, 1.964rem + 2.68vw, 4.375rem);
 }
 
 .footer__content {
@@ -10,7 +10,7 @@
 
 .footer__contacts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 250px);
   column-gap: var(--space-large);
   max-width: 584px;
   font-size: 14px;

@@ -4,13 +4,17 @@
   --font-family: "Bebas Neue", sans-serif;
   --second-family: "Roboto", sans-serif;
 
-  --font-main: 16px;
+  --font-main: clamp(0.75rem, 0.679rem + 0.36vw, 1rem); /* 12px - 16px */
 
   /* spacing */
 
-  --space-main: 30px;
-  --space-large: 50px;
-  --space-section: 150px;
+  --space-main: clamp(0.75rem, 0.429rem + 1.61vw, 1.875rem); /* 12px - 30px */
+  --space-large: clamp(1.875rem, 1.518rem + 1.79vw, 3.125rem); /* 30px - 50px */
+  --space-section: clamp(
+    4.375rem,
+    2.946rem + 7.14vw,
+    9.375rem
+  ); /* 70px - 150px */
 
   /* colors */
 

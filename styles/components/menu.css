@@ -18,3 +18,10 @@
 .menu__link:active {
   color: var(--color-main);
 }
+
+@media screen and (max-width: 560px) {
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -34,12 +34,12 @@
 }
 
 .form__textarea {
-  height: 170px;
+  height: clamp(5rem, 3.393rem + 8.04vw, 10.625rem);
   resize: none;
   overflow: hidden;
   outline: none;
 }
 
 .form__btn {
-  padding-inline: 53px;
+  padding-inline: clamp(1.563rem, 1.063rem + 2.5vw, 3.313rem);
 }
