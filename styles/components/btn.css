@@ -13,6 +13,10 @@
   transition: background-color 0.2s;
 }
 
+.btn span {
+  color: var(--color-black);
+}
+
 .btn:hover,
 .btn:active {
   background-color: var(--color-hover-btn);
