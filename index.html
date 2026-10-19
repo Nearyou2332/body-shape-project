@@ -1,382 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <title>Body Shape</title>
-    <link
-      rel="shortcut icon"
-      href="image/favicons/favicon.svg"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <svg style="display: none">
-      <symbol id="vk-icon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M1.68 1.68C3.17891e-07 3.376 0 6.088 0 11.52V12.48C0 17.904 3.17891e-07 20.616 1.68 22.32C3.376 24 6.088 24 11.52 24H12.48C17.904 24 20.616 24 22.32 22.32C24 20.624 24 17.912 24 12.48V11.52C24 6.096 24 3.384 22.32 1.68C20.624 3.17891e-07 17.912 0 12.48 0H11.52C6.096 0 3.384 3.17891e-07 1.68 1.68ZM4.04817 7.30423H6.80017C6.88817 11.8803 8.90417 13.8163 10.5041 14.2163V7.30423H13.0881V11.2483C14.6641 11.0803 16.3281 9.28023 16.8881 7.29623H19.4641C19.2541 8.32324 18.8345 9.29591 18.2316 10.1535C17.6288 11.0109 16.8555 11.7349 15.9601 12.2803C16.9593 12.7775 17.8417 13.4809 18.5491 14.3443C19.2565 15.2075 19.7729 16.2108 20.0641 17.2883H17.2241C16.6161 15.3923 15.0961 13.9203 13.0881 13.7203V17.2883H12.7761H12.7681C7.29617 17.2883 4.17617 13.5443 4.04817 7.30423Z"
-          fill="currentColor"
-        />
-      </symbol>
-      <symbol id="rutube-icon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M15.921 5.69727H2.75012V19.908H6.41594V15.2848H13.4404L16.6454 19.908H20.7501L17.216 15.2635C18.3137 15.0931 19.1038 14.6882 19.5868 14.0491C20.0696 13.41 20.3112 12.3872 20.3112 11.0237V9.95843C20.3112 9.14879 20.2235 8.50966 20.0698 8.01965C19.916 7.52963 19.6526 7.10346 19.2795 6.71999C18.8843 6.3578 18.4454 6.10215 17.9185 5.93175C17.3916 5.78264 16.7331 5.69727 15.921 5.69727ZM15.3283 12.153H6.41594V8.82916H15.3283C15.833 8.82916 16.1843 8.9143 16.3599 9.06353C16.5355 9.21264 16.6454 9.48957 16.6454 9.89446V11.0876C16.6454 11.5136 16.5355 11.7905 16.3599 11.9397C16.1843 12.0888 15.8332 12.1527 15.3283 12.1527V12.153Z"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M20.4911 5.44727C21.1811 5.44727 21.7408 4.88764 21.7408 4.19727C21.7408 3.50689 21.1811 2.94727 20.4911 2.94727C19.8006 2.94727 19.2408 3.50689 19.2408 4.19727C19.2408 4.88764 19.8006 5.44727 20.4911 5.44727Z"
-          fill="currentColor"
-        />
-      </symbol>
-      <symbol id="dzen-icon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M11.962 20.9968H12.0337C15.6076 20.9968 17.6821 20.637 19.1515 19.2104C20.6498 17.6971 20.9958 15.6087 20.9958 12.0487V11.9481C20.9958 8.38918 20.6498 6.31469 19.1515 4.7864C17.6831 3.35985 15.5937 3 12.0348 3H11.963C8.38919 3 6.31362 3.35985 4.84423 4.7864C3.34593 6.2997 3 8.38918 3 11.9481V12.0487C3 15.6076 3.34593 17.6821 4.84423 19.2104C6.2997 20.637 8.38919 20.9968 11.962 20.9968Z"
-          fill="currentColor"
-        />
-        <path
-          d="M18.8534 11.8621C18.8534 11.7936 18.7977 11.7368 18.7291 11.7336C16.2694 11.6404 14.7724 11.3267 13.7251 10.2794C12.6757 9.22997 12.363 7.73186 12.2698 5.26679C12.2677 5.19826 12.2109 5.14258 12.1413 5.14258H11.8544C11.7858 5.14258 11.7291 5.19826 11.7259 5.26679C11.6327 7.73079 11.32 9.22997 10.2706 10.2794C9.22223 11.3277 7.72626 11.6404 5.26655 11.7336C5.19801 11.7357 5.14233 11.7925 5.14233 11.8621V12.1491C5.14233 12.2176 5.19801 12.2744 5.26655 12.2776C7.72626 12.3707 9.22329 12.6845 10.2706 13.7318C11.3179 14.7791 11.6305 16.2729 11.7248 18.7283C11.7269 18.7968 11.7837 18.8525 11.8533 18.8525H12.1413C12.2099 18.8525 12.2666 18.7968 12.2698 18.7283C12.3641 16.2729 12.6768 14.7791 13.7241 13.7318C14.7724 12.6834 16.2683 12.3707 18.7281 12.2776C18.7966 12.2754 18.8523 12.2187 18.8523 12.1491V11.8621H18.8534Z"
-          fill="#1F2A32"
-        />
-      </symbol>
-      <symbol id="telegram-icon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M16.5915 7.52981C16.596 7.52981 16.602 7.52981 16.608 7.52981C16.7647 7.52981 16.9102 7.57856 17.0295 7.66255L17.0272 7.66106C17.1142 7.7368 17.1727 7.84331 17.187 7.9633V7.96556C17.202 8.05705 17.2102 8.16206 17.2102 8.26931C17.2102 8.31806 17.2087 8.36606 17.205 8.41405V8.4073C17.0362 10.1841 16.3042 14.4928 15.9322 16.4818C15.7747 17.3241 15.465 17.6061 15.165 17.6331C14.5132 17.6938 14.0182 17.2026 13.3867 16.7886C12.3982 16.1398 11.8395 15.7363 10.8802 15.1041C9.77096 14.3743 10.4902 13.9716 11.1217 13.3161C11.2875 13.1436 14.1607 10.5298 14.217 10.2928C14.22 10.2786 14.2215 10.2628 14.2215 10.2463C14.2215 10.1878 14.1997 10.1346 14.1645 10.0941C14.1255 10.0686 14.0767 10.0543 14.0257 10.0543C13.992 10.0543 13.9597 10.0611 13.9297 10.0723L13.9312 10.0716C13.8322 10.0941 12.2532 11.1376 9.19421 13.2021C8.86046 13.4653 8.43896 13.6318 7.97996 13.6513H7.97546C7.32521 13.5726 6.73496 13.4278 6.17471 13.2216L6.23021 13.2396C5.52671 13.0101 4.96796 12.8893 5.01596 12.5008C5.04146 12.2988 5.31996 12.0921 5.85146 11.8806C9.12546 10.4541 11.3087 9.51381 12.4012 9.0598C13.6065 8.42005 15.0037 7.89355 16.473 7.5523L16.5907 7.52905L16.5915 7.52981ZM11.9475 0.768555C5.72096 0.783555 0.678711 5.8348 0.678711 12.0636C0.678711 18.3013 5.73521 23.3586 11.9737 23.3586C18.2122 23.3586 23.2687 18.3021 23.2687 12.0636C23.2687 5.8348 18.2265 0.783555 12.0015 0.768555H12C11.9825 0.768555 11.965 0.768555 11.9475 0.768555Z"
-          fill="currentColor"
-        />
-      </symbol>
-    </svg>
-    <header class="header">
-      <div class="container header__content">
-        <div class="header__top">
-          <img
-            class="header__logo"
-            src="image/hero/logo.png"
-            alt="BodyShape logo"
-            srcset="image/hero/logo@2x.png 2x"
-          />
-          <nav class="menu header__menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="#!" class="menu__link">Инструкторы</a>
-              </li>
-              <li class="menu__item">
-                <a href="#!" class="menu__link">Секции</a>
-              </li>
-              <li class="menu__item">
-                <a href="#!" class="menu__link">Новости</a>
-              </li>
-              <li class="menu__item">
-                <a href="#!" class="menu__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header__media">
-          <h1 class="visually-hidden">Фитнесс-центр Body Shape</h1>
-          <img
-            src="image/hero/hero-logo.png"
-            alt="BodyShape logo"
-            srcset="image/hero/hero-logo@2x.png 2x"
-          />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171e23">
+  <meta name="description" content="Find your strength with Body Shape. Explore strength, conditioning and mobility programs, and build your personal training starting point.">
+  <title>Body Shape — Build your strength. Own your pace.</title>
+  <link rel="icon" href="image/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="image/favicons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/bebas-neue/bebasneuebold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="image/optimized/hero-bg.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles/main.css?v=4">
+  <script src="scripts/main.js?v=4" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="hero" id="home">
+    <div class="container topbar">
+      <a class="brand" href="#home" aria-label="Body Shape home"><img src="image/hero/logo@2x.png" width="183" height="64" alt="Body Shape"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <a href="#programs">Programs</a><a href="#approach">Our approach</a><a href="#coaching">Coaching</a><a href="#faq">FAQ</a>
+        <a href="#start" class="button button--small">Find your fit <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="container hero__body">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR NEXT CHAPTER STARTS HERE</p>
+        <h1>BUILD YOUR<br> STRENGTH.<br> <span>OWN YOUR PACE.</span></h1>
+        <p class="hero__description">More than a workout. A stronger way to show up.<br class="desktop-break"> Find the training that moves you forward.</p>
+        <div class="hero__actions"><a class="button" href="#programs">Explore programs <span aria-hidden="true">↗</span></a><a class="text-link" href="#start">Build my starting plan <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero__caption"><span class="caption-line" aria-hidden="true"></span> SHOW UP FOR YOURSELF.</div>
+    </div>
+    <div class="container hero__bottom"><span>STRENGTH / CONDITIONING / MOBILITY</span><a href="#programs">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+  </header>
+  <main id="main">
+    <div class="intro-strip"><div class="container intro-strip__inner"><p>Different goals.<br> <strong>Same commitment.</strong></p><div><span>01</span> Start where you are</div><div><span>02</span> Train with purpose</div><div><span>03</span> Make it a habit</div></div></div>
+    <section class="section programs" id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">01 / FIND YOUR MOVEMENT</p><h2 id="programs-title">YOUR GOAL.<br> <span>YOUR PROGRAM.</span></h2></div><p>Lift heavier. Move better. Feel stronger.<br> Choose a direction that fits your life —<br> and make the first session yours.</p></div>
+        <div class="filters" role="group" aria-label="Filter programs"><button class="filter is-active" data-filter="all" aria-pressed="true">All programs <span>06</span></button><button class="filter" data-filter="strength" aria-pressed="false">Strength</button><button class="filter" data-filter="conditioning" aria-pressed="false">Conditioning</button><button class="filter" data-filter="mobility" aria-pressed="false">Mobility</button></div>
+        <p class="sr-only" id="filter-status" role="status">Showing 6 programs</p>
+        <div class="program-grid">
+          <article class="program-card" data-category="strength"><button data-program="strength" aria-label="Explore Strength Foundations"><img src="image/optimized/program-01.webp" alt="Athlete performing a pull-up in a gym" width="536" height="500" loading="lazy"><span class="program-card__top"><span>STRENGTH</span><span>01</span></span><span class="program-card__bottom"><span class="program-card__meta">BUILD A STRONG BASE</span><span class="program-card__title">Strength Foundations</span><span class="program-card__detail">Technique first. Progress that lasts.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
+          <article class="program-card" data-category="conditioning"><button data-program="functional" aria-label="Explore Functional Training"><img src="image/optimized/program-02.webp" alt="Suspension training equipment in a workout space" width="536" height="500" loading="lazy"><span class="program-card__top"><span>CONDITIONING</span><span>02</span></span><span class="program-card__bottom"><span class="program-card__meta">MOVE WITH PURPOSE</span><span class="program-card__title">Functional Training</span><span class="program-card__detail">Full-body work. Everyday strength.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
+          <article class="program-card" data-category="mobility"><button data-program="pilates" aria-label="Explore Pilates and Mobility"><img src="image/optimized/program-03.webp" alt="Group practicing controlled movement on exercise mats" width="536" height="500" loading="lazy"><span class="program-card__top"><span>MOBILITY</span><span>03</span></span><span class="program-card__bottom"><span class="program-card__meta">CONTROL YOUR MOVEMENT</span><span class="program-card__title">Pilates &amp; Mobility</span><span class="program-card__detail">Find balance. Build body awareness.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
+          <article class="program-card" data-category="conditioning"><button data-program="cardio" aria-label="Explore Cardio Flow"><img src="image/optimized/program-04.webp" alt="Athlete running up outdoor steps" width="536" height="500" loading="lazy"><span class="program-card__top"><span>CONDITIONING</span><span>04</span></span><span class="program-card__bottom"><span class="program-card__meta">FIND YOUR RHYTHM</span><span class="program-card__title">Cardio Flow</span><span class="program-card__detail">A steady pace. A stronger engine.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
+          <article class="program-card" data-category="conditioning"><button data-program="hiit" aria-label="Explore Beast Mode"><img src="image/optimized/program-05.webp" alt="Athlete working with battle ropes" width="536" height="500" loading="lazy"><span class="program-card__top"><span>CONDITIONING</span><span>05</span></span><span class="program-card__bottom"><span class="program-card__meta">BRING YOUR ENERGY</span><span class="program-card__title">Beast Mode</span><span class="program-card__detail">Focused intervals. A fresh challenge.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
+          <article class="program-card" data-category="strength"><button data-program="kettlebell" aria-label="Explore Kettlebell Strength"><img src="image/optimized/program-06.webp" alt="Athlete holding a kettlebell overhead" width="536" height="500" loading="lazy"><span class="program-card__top"><span>STRENGTH</span><span>06</span></span><span class="program-card__bottom"><span class="program-card__meta">STRENGTH IN MOTION</span><span class="program-card__title">Kettlebell Strength</span><span class="program-card__detail">Build coordination with every rep.</span></span><span class="round-arrow" aria-hidden="true">↗</span></button></article>
         </div>
       </div>
-    </header>
-    <main class="main">
-      <section class="section trainers">
-        <div class="container trainers__content">
-          <div class="trainers__top">
-            <h2 class="trainers__title">ПЕРСОНАЛЬНЫЕ ТРЕНЕРА</h2>
-            <p class="trainers__descr">
-              В&nbsp;нашей команде профессиональные тренеры, которые помогут вам
-              достичь ваших фитнес-целей. Индивидуальный подход, мотивация
-              и&nbsp;поддержка на&nbsp;каждом этапе вашего пути к&nbsp;успеху.
-            </p>
-          </div>
-          <ul class="trainers__list">
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-01.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-01@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-02.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-02@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-03.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-03@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-04.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-04@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-05.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-05@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-06.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-06@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-07.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-07@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-            <li class="trainers__item">
-              <div class="trainers__card">
-                <img
-                  class="trainers__image"
-                  src="image/trainers/trainer-08.jpg"
-                  alt="trainer photo"
-                  srcset="image/trainers/trainer-08@2x.jpg 2x"
-                  loading="lazy"
-                />
-                <h3 class="trainers__heading">Name Surname</h3>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section beast">
-        <div class="container beast__content">
-          <div class="beast__top">
-            <h2 class="beast__title">РЕЖИМ ЗВЕРЯ</h2>
-            <p class="beast__descr">
-              Ультраинтенсивные тренировки для тех, кто стремится выйти за
-              пределы своих возможностей. Силовые и кардиотренировки высокой
-              интенсивности помогут развить выносливость, мощь и непоколебимую
-              уверенность в себе.
-            </p>
-          </div>
-          <a class="btn" href="#!"><span>ЗАПИСАТЬСЯ</span></a>
-        </div>
-      </section>
-      <section class="section programs">
-        <div class="container programs__content">
-          <div class="programs__top">
-            <h2 class="programs__title">ПРОГРАММЫ И СЕКЦИИ</h2>
-            <p class="programs__descr">
-              Разнообразные тренировки и&nbsp;занятия для всех уровней
-              подготовки. Найдите свою идеальную программу и&nbsp;начните путь
-              к&nbsp;здоровью и&nbsp;силе.
-            </p>
-          </div>
-          <ul class="programs__list">
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-01.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-01.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">ТРЕНИРОВКИ</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-02.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-02.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">КРОССФИТ</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-03.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-03.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">ПИЛАТЕС</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-04.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-04.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">АЭРОБИКА</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-05.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-05.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">ВЫНОСЛИВОСТЬ</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-06.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-06.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">ВЫСТУПЛЕНИЯ</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-07.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-07.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">ФИТНЕС</h3>
-              </div>
-            </li>
-            <li class="programs__item">
-              <div class="programs__card">
-                <img
-                  class="programs__image"
-                  src="image/groups/program-08.jpg"
-                  alt="program type photo"
-                  srcset="image/groups/program-08.jpg"
-                  loading="lazy"
-                />
-                <h3 class="programs__subtitle">РЕЛЬЕФ</h3>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section contact">
-        <div class="container contact__content">
-          <h2 class="contact__title">НАПИСАТЬ НАМ</h2>
-          <form method="POST" class="form contact__form">
-            <label class="form__label">
-              <span class="form__text">Ваше имя</span>
-              <input type="text" name="name" class="form__input" />
-            </label>
-            <label class="form__label">
-              <span class="form__text">E-mail</span>
-              <input type="email" name="email" class="form__input" />
-            </label>
-            <label class="form__label">
-              <span class="form__text">Сообщение</span>
-              <textarea name="" id="" class="form__textarea"></textarea>
-            </label>
-            <button class="btn form__btn">ОТПРАВИТЬ</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container footer__content">
-        <div class="socials footer__socials">
-          <a class="socials__link" href="#!" aria-label="dzen">
-            <svg width="24" height="24">
-              <use href="#dzen-icon" />
-            </svg>
-          </a>
-          <a class="socials__link" href="#!" aria-label="rutube">
-            <svg width="24" height="24">
-              <use href="#rutube-icon" />
-            </svg>
-          </a>
-          <a class="socials__link" href="#!" aria-label="telegram">
-            <svg width="24" height="24">
-              <use href="#telegram-icon" />
-            </svg>
-          </a>
-          <a class="socials__link" href="#!" aria-label="vk">
-            <svg width="24" height="24">
-              <use href="#vk-icon" />
-            </svg>
-          </a>
-        </div>
-        <div class="footer__contacts">
-          <p class="footer__text">
-            г. Москва, ул. Тверская, д.&nbsp;12, стр.&nbsp;1 Россия, 125009
-          </p>
-          <a class="footer__link" href="tel:+78001234567"
-            >Телефон +7 (800) 12 34 567</a
-          >
-          <a class="footer__link" href="mailto:info@bodyshape.ru"
-            >info@bodyshape.ru</a
-          >
-        </div>
-      </div>
-    </footer>
-  </body>
+    </section>
+    <section class="beast" id="approach" aria-labelledby="approach-title"><div class="container beast__inner"><div class="beast__copy"><p class="eyebrow">02 / THE BODY SHAPE MINDSET</p><h2 id="approach-title">MORE FOCUS.<br> FEWER EXCUSES.<br> <span>ALL YOU.</span></h2><p>You don't need to be the strongest person in the room. Just be ready to take your next step. We believe in intentional training, good technique, and a pace you can keep.</p><a class="button" href="#start">Find my starting point <span aria-hidden="true">↗</span></a></div><span class="beast__side" aria-hidden="true">PROGRESS IS PERSONAL.</span></div></section>
+    <section class="section coaching" id="coaching" aria-labelledby="coaching-title"><div class="container"><div class="section-heading"><div><p class="eyebrow">03 / TRAIN WITH INTENTION</p><h2 id="coaching-title">GOOD FORM.<br> <span>GREAT FOUNDATION.</span></h2></div><p>A clear purpose behind every movement.<br> Explore the four pillars of a balanced<br> training practice.</p></div><div class="coaching-grid">
+      <article class="coach-card"><img src="image/optimized/trainer-01.webp" width="536" height="800" alt="Athlete practicing a kettlebell movement" loading="lazy"><div><span>01 / TECHNIQUE</span><h3>Move well first.</h3><p>Build confidence in the basics before adding more weight.</p></div></article>
+      <article class="coach-card"><img src="image/optimized/trainer-04.webp" width="536" height="800" alt="Focused battle rope training session" loading="lazy"><div><span>02 / CONSISTENCY</span><h3>Keep showing up.</h3><p>Choose a rhythm that works with your real life.</p></div></article>
+      <article class="coach-card"><img src="image/optimized/trainer-05.webp" width="536" height="800" alt="Athlete doing an outdoor running drill" loading="lazy"><div><span>03 / PROGRESSION</span><h3>Build your momentum.</h3><p>Small, deliberate steps give each session a purpose.</p></div></article>
+      <article class="coach-card"><img src="image/optimized/trainer-06.webp" width="536" height="800" alt="Athlete stretching on an exercise mat" loading="lazy"><div><span>04 / RECOVERY</span><h3>Make room to reset.</h3><p>Rest and mobility belong in your routine, too.</p></div></article>
+    </div></div></section>
+    <section class="section faq" id="faq" aria-labelledby="faq-title"><div class="container faq__layout"><div><p class="eyebrow">04 / BEFORE YOU START</p><h2 id="faq-title">A LITTLE CLARITY.<br> <span>A LOT OF POTENTIAL.</span></h2><p class="muted">Your first step doesn't have to be complicated.</p></div><div class="faq__list">
+      <details><summary>I'm new to training. Where do I start?<span aria-hidden="true">+</span></summary><p>Start with Strength Foundations or Pilates &amp; Mobility. Focus on learning the movements at a comfortable pace. The starting-plan builder below can help you choose a direction.</p></details>
+      <details><summary>How do I choose the right program?<span aria-hidden="true">+</span></summary><p>Pick the goal that matters most to you: building strength, improving conditioning, or moving more freely. Open any program card to see its focus, format, and suggested experience level.</p></details>
+      <details><summary>Do I need equipment?<span aria-hidden="true">+</span></summary><p>It depends on the program. Strength and kettlebell sessions use gym equipment; mobility and cardio can start with a mat and space to move. Each program card includes equipment guidance.</p></details>
+      <details><summary>Does the starting plan book a session?<span aria-hidden="true">+</span></summary><p>No. It creates a simple training outline in your browser. You can review and download it, but it does not reserve a class, send a request, or share your information.</p></details>
+    </div></div></section>
+    <section class="section start" id="start" aria-labelledby="start-title"><div class="container start__layout"><div class="start__copy"><p class="eyebrow">05 / MAKE IT YOURS</p><h2 id="start-title">YOUR NEXT REP<br> <span>STARTS HERE.</span></h2><p>One goal. A little direction. A plan you can actually start.<br> Tell us what you're working toward.</p><div class="start__note"><span aria-hidden="true">↗</span><p>Built in your browser.<br> No sign-up. No data sent. Just a starting point.</p></div></div>
+      <div class="plan-panel"><form id="plan-form" novalidate><div class="form-heading"><h3>Find your starting plan</h3><span>01—03</span></div><label for="goal">01 / YOUR MAIN GOAL</label><select id="goal" name="goal" aria-describedby="goal-error" required><option value="" disabled selected>Choose your focus</option><option value="strength">Build strength</option><option value="conditioning">Improve conditioning</option><option value="mobility">Move better</option></select><p id="goal-error" class="form-error" role="alert" hidden>Choose a goal to build your starting plan.</p><div class="form-row"><div><label for="level">02 / YOUR EXPERIENCE</label><select id="level" name="level"><option value="beginner">Just starting</option><option value="returning">Getting back to it</option><option value="experienced">Training regularly</option></select></div><div><label for="days">03 / DAYS PER WEEK</label><select id="days" name="days"><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option></select></div></div><button type="submit" class="button button--full">Build my plan <span aria-hidden="true">↗</span></button><p class="form-note">An introductory outline, tailored to your selections. No booking or application is submitted.</p><noscript><p class="form-note">Enable JavaScript to build a plan. You can still explore all programs above.</p></noscript></form><section class="plan-result" id="plan-result" aria-labelledby="result-title" hidden><p class="eyebrow">YOUR STARTING POINT</p><h3 id="result-title" tabindex="-1"></h3><p id="result-intro"></p><ul id="result-sessions"></ul><p class="form-note">Keep the first sessions comfortable. Adapt the outline to your needs and seek qualified guidance for unfamiliar movements.</p><div class="result-actions"><button class="button" id="download-plan" type="button">Save my plan <span aria-hidden="true">↓</span></button><button class="text-link" id="edit-plan" type="button">Adjust choices ↗</button></div><p class="sr-only" role="status" id="download-status"></p></section></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer__top"><div class="footer__brand"><a class="brand" href="#home" aria-label="Body Shape home"><img src="image/hero/logo@2x.png" width="183" height="64" alt="Body Shape"></a><p>Build your strength.<br> Own your pace.</p></div><div class="footer__column"><h2>EXPLORE</h2><a href="#programs">Programs</a><a href="#approach">Our approach</a><a href="#coaching">Coaching</a><a href="#start">Your starting plan</a></div><div class="footer__column"><h2>LOCATION</h2><address>123 Fitness Avenue<br> Austin, TX 78701<br> United States</address><p class="footer__fine">Illustrative address</p></div><div class="footer__column"><h2>STAY INSPIRED</h2><div class="socials">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.7 8.7h3.4V21H3.7V8.7Zm5.6 0h3.3v1.7c.7-1.2 1.8-2 3.6-2 3.6 0 4.1 2.4 4.1 5.5V21h-3.4v-6.3c0-1.5 0-3.4-2.1-3.4s-2.2 1.6-2.2 3.3V21H9.3V8.7Z"/></svg></a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 3H22l-6.8 7.8L23.2 21h-6.3L12 14.6 6.4 21H3.2l7.3-8.4L2.8 3h6.5l4.5 5.9L18.9 3Zm-1.1 16.2h1.8L8.3 4.7H6.4l11.4 14.5Z"/></svg></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-8h2.8l.4-3H14V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.6v8H14Z"/></svg></a>
+    </div><p class="footer__fine">Explore the platforms.<br> Brand profiles coming later.</p></div></div><div class="footer__bottom"><p>© <span id="year">2026</span> Body Shape</p><span>MADE TO MOVE YOU.</span><a href="#home">Back to top ↑</a></div></div></footer>
+  <dialog id="program-dialog" aria-labelledby="dialog-title"><div class="dialog__inner"><button class="dialog__close" aria-label="Close program details" type="button">✕</button><p class="eyebrow" id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl id="dialog-facts"></dl><a class="button" id="choose-program" href="#start">Build a plan for this goal <span aria-hidden="true">↗</span></a></div></dialog>
+</body>
 </html>
